@@ -7,16 +7,16 @@
 
 
 .student-cont {
-  border: #000000 solid 2px;
+  /* border: #000000 solid 0px; */
   border-radius: 10px;
   padding: 20px;
   text-align: center;
   box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.475);
-  background-color: #c6c5c5;
+  background-color: rgba(161, 174, 211, 0.5);
 }
 
 button{
-  background-color: #454545; /* Green */
+  background-color: royalblue; /* Green */
   border: none;
 
   color: white;
@@ -29,5 +29,77 @@ button{
   cursor: pointer;
 }
 button:hover {
-  background-color: #555555; /* Darker green */
+  background-color: dodgerblue;
+  transition: 0.5s ease;
+}
+.task-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.task-field {
+  padding: 10px;
+  width: 60%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.task-field:focus {
+  border-color: royalblue;
+  box-shadow: 0 0 3px rgba(65, 105, 225, 0.5);
+}
+
+.add-btn {
+  padding: 10px 15px;
+  background-color: royalblue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.add-btn:hover {
+  background-color: dodgerblue;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  width: 60%;
+  margin: auto;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4f4f4;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+}
+
+.delete-btn {
+  background-color: crimson;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
 }
