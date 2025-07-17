@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Student({ img, name, status, ID, info }) {
+function Student({ img, name, status, lastName, ID, info, onDeleteStudent}) {
   const [showDetails, setShowDetails] = useState(false);
   const [showMore, setShowMore] = useState(false);
   return (
@@ -8,10 +8,10 @@ function Student({ img, name, status, ID, info }) {
       <div className="student-cont">
         <h3>Medford High ID</h3>
         <img src={img} alt={name} width="170px" height="170px" />
-        <h2>{name}</h2>
+        <h2>{name} {lastName}</h2>
         {showDetails && (
           <p>
-            Welcome to Medford High<b> Mr {name}</b>
+            Welcome to Medford High<b> Mr {name} {lastName}</b>
           </p>
         )}
         {showDetails && (
@@ -27,6 +27,7 @@ function Student({ img, name, status, ID, info }) {
           {showMore ? "Less‹‹" : "See More››"}
         </button>
         {showMore && <p>{info}</p>}
+        <button onClick={onDeleteStudent}>Delete Student</button>
       </div>
     </>
   );
